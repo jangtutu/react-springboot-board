@@ -1,0 +1,10 @@
+# board-back 관련
+board-back/target/
+board-back/.idea/
+board-back/*.iml
+
+# board-front 관련
+board-front/node_modules/
+board-front/.env
+
+.vscode/
