@@ -2,7 +2,6 @@ package com.board.board_back.config;
 
 import java.io.IOException;
 
-import org.springframework.beans.factory.annotation.Configurable;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.http.HttpMethod;
@@ -57,8 +56,8 @@ class FailedAuthenticationEntryPoint implements AuthenticationEntryPoint {
             AuthenticationException authException) throws IOException, ServletException {
 
         response.setContentType("application/json");
-        response.setStatus(HttpServletResponse.SC_FORBIDDEN);
-        response.getWriter().write("{\"code\":\"NP\",\"message\":\"Do not have permission.\"}");
+        response.setStatus(HttpServletResponse.SC_UNAUTHORIZED);
+        response.getWriter().write("{\"code\":\"AF\",\"message\":\"Authorization Failed\"}");
     }
     
 }
